@@ -1,9 +1,32 @@
 
-<div id="player" style="width: 800px; height: 600px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
-    <div style="background-color:black">
-        <button style="border-style: none; cursor: pointer; color: white; background-color:transparent;" class="js-play-button"><i class="fa-solid fa-play"></i></button>
-        <button style="border-style: none; cursor: pointer; color: white; background-color:transparent;" class="js-pause-button"><i class="fa-solid fa-stop"></i></button>
+<style>
+
+    .buttons-container {
+        background-color:black;
+    }
+    .buttons-container button.js-play-pause-button {
+        border-style: none;
+        cursor: pointer;
+        color: white;
+        background-color:transparent;
+    }
+
+    .video-player {
+        width: 800px;
+        height: 600px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    div.js-video-container {
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
+<div id="player" class="video-player">
+    <div class="js-video-container"></div>
+    <div class="buttons-container">
+        <button class="js-play-button js-play-pause-button" ><i class="fa-solid fa-play"></i></button>
+        <button class="js-pause-button js-play-pause-button" ><i class="fa-solid fa-stop"></i></button>
     </div>
 </div>
 
