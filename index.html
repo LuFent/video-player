@@ -4,11 +4,13 @@
     .buttons-container {
         background-color:black;
     }
-    .buttons-container button.js-play-pause-button {
+    .buttons-container button.js-player-button {
         border-style: none;
         cursor: pointer;
         color: white;
         background-color:transparent;
+        font-size: 150%;
+        line-height: 1.5;
     }
 
     .video-player {
@@ -26,8 +28,12 @@
 <div id="player" class="video-player">
     <div class="js-video-container"></div>
     <div class="buttons-container">
-        <button class="js-play-button js-play-pause-button" ><i class="fa-solid fa-play"></i></button>
-        <button class="js-pause-button js-play-pause-button" ><i class="fa-solid fa-stop"></i></button>
+        <button class="js-play-button js-player-button" ><i class="fa-solid fa-play"></i></button>
+        <button class="js-pause-button js-player-button" ><i class="fa-solid fa-stop"></i></button>
+
+        <button class="js-mute-button js-player-button" ><i class="fa fa-volume-up" aria-hidden="true"> </i> </button>
+        <button class="js-volume-button js-player-button" ><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+
     </div>
 </div>
 
