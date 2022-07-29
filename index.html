@@ -3,6 +3,7 @@
 
     .buttons-container {
         background-color:black;
+        display: flex;
     }
     .buttons-container button.js-player-button {
         border-style: none;
@@ -13,6 +14,9 @@
         line-height: 1.5;
         padding: 5px 15px;
         box-sizing: border-box;
+    }
+    .buttons-container div.buttons-central-seporator {
+    	flex-grow: 1;
     }
     
     .video-player {
@@ -35,6 +39,10 @@
 
         <button class="js-mute-button js-player-button" ><i class="fa fa-volume-up" aria-hidden="true"> </i> </button>
         <button class="js-volume-button js-player-button" ><i class="fa fa-volume-off" aria-hidden="true"></i></button>
+        
+        <div class = "buttons-central-seporator"></div>
+        
+ 	<button class="js-fullscreen-button js-player-button" ><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
 
     </div>
 </div>
