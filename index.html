@@ -1,58 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <style>
 
-<style>
+            .buttons-container {
+                background-color:black;
+                display: flex;
+            }
+            .buttons-container .player-button {
+                border-style: none;
+                cursor: pointer;
+                color: white;
+                background-color:transparent;
+                font-size: 150%;
+                line-height: 1.5;
+                padding: 5px 15px;
+                box-sizing: border-box;
+            }
+            .buttons-container .buttons-central-seporator {
+                flex-grow: 1;
+            }
 
-    .buttons-container {
-        background-color:black;
-        display: flex;
-    }
-    .buttons-container button.js-player-button {
-        border-style: none;
-        cursor: pointer;
-        color: white;
-        background-color:transparent;
-        font-size: 150%;
-        line-height: 1.5;
-        padding: 5px 15px;
-        box-sizing: border-box;
-    }
-    .buttons-container div.buttons-central-seporator {
-    	flex-grow: 1;
-    }
-    
-    .video-player {
-        display: flex;
-        flex-direction: column;
-        width: 800px;
-        height: 600px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    div.js-video-container {
-        flex-grow: 1;
-    }
+            .video-player {
+                display: flex;
+                flex-direction: column;
+                width: 800px;
+                height: 600px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            }
+            .video-container {
+                flex-grow: 1;
+            }
 
-</style>
-<div id="player" class="video-player">
-    <div class="js-video-container"></div>
-    <div class="buttons-container">
-        <button class="js-play-button js-player-button" ><i class="fa-solid fa-play"></i></button>
-        <button class="js-pause-button js-player-button" ><i class="fa-solid fa-stop"></i></button>
+        </style>
+    </head>
 
-        <button class="js-mute-button js-player-button" ><i class="fa fa-volume-up" aria-hidden="true"> </i> </button>
-        <button class="js-volume-button js-player-button" ><i class="fa fa-volume-off" aria-hidden="true"></i></button>
-        
-        <div class = "buttons-central-seporator"></div>
-        
- 	<button class="js-fullscreen-button js-player-button" ><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+    <body>
+        <div id="player" class="video-player">
+            <div class="js-video-container video-container"></div>
+            <div class="buttons-container">
+                <button class="js-play-button player-button" ><i class="fa-solid fa-play"></i></button>
+                <button class="js-pause-button player-button" ><i class="fa-solid fa-stop"></i></button>
 
-    </div>
-</div>
+                <button class="js-mute-button player-button" ><i class="fa fa-volume-up" aria-hidden="true"> </i> </button>
+                <button class="js-volume-button player-button" ><i class="fa fa-volume-off" aria-hidden="true"></i></button>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
-<script src="player.js"></script>
-<script src="https://kit.fontawesome.com/f3fea3be84.js" crossorigin="anonymous"></script>
+                <div class = "buttons-central-seporator"></div>
 
-<script type="text/javascript">
-  createPlayer({elementId: 'player'});
-</script>
-<br>
+            <button class="js-fullscreen-button player-button" ><i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+        <script src="player.js"></script>
+        <script src="https://kit.fontawesome.com/f3fea3be84.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+          createPlayer({elementId: 'player'});
+        </script>
+        <br>
+    </body>
+</html>
